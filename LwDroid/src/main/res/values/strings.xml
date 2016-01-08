@@ -1,0 +1,11 @@
+<resources>
+ 
+     <string name="title_error">Error!</string>
+     <string name="working">Pracuji</string>
+     <string name="bt_edit">...</string>
+      <string name="bt_select">Vyber</string>
+    <string name="bt_play">▶</string>
+     <string name="ok">Ok</string>
+     <string name="back">Zpět</string>
+     <string name="settings">Nastavení</string>
+</resources>

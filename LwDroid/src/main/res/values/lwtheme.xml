@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <color name="button_normal">#6393f0</color>
+     <color name="button_pushed">#224b97</color>
+     <color name="button_text">#FFFFFF</color>
+     <color name="button_disabled">#d7d7d7</color>
+     <dimen name="button_padding">20dp</dimen>
+     
+    <color name="spinner_normal">#66999999</color>
+     <color name="spinner_pushed">#000000</color>
+     <color name="spinner_text">#FFFFFF</color>
+     <color name="spinner_disabled">#66d7d7d7</color>
+     <dimen name="spinner_padding">10dp</dimen>
+     
+     <color name="edittext_normal">#66aaaaaa</color>     
+     <color name="edittext_text">#FFFFFF</color>
+     <color name="edittext_disabled">#66d7d7d7</color>
+     <dimen name="edittext_padding">10dp</dimen>
+     
+     <color name="textview_bgcolor">#00FFFFFF</color>
+     <dimen name="textview_padding">10dp</dimen>
+     <color name="textview_text">#FFFFFF</color>
+           
+      <color name="background">#ee6393f0</color>
+     <color name="window_bg_start">#FFFFFF</color>
+     <color name="window_bg_center">#AAAAAA</color>
+     
+     
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+	
+	<dimen name="tabcorner_rad">5dp</dimen>
+	
+</resources>

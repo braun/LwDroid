@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ButtonBarContainerTheme">
+        <attr name="mta" format="reference" />
+         <attr name="messageBoxStyle" format="reference" />
+    </declare-styleable>
+ 
+</resources>

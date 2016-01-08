@@ -1,0 +1,63 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+      <style name="LwBaseTheme" parent="@android:Theme">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    
+    </style>
+
+    <!-- Lwlication theme. -->
+    <style name="LwTheme" parent="LwBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+           <item name="android:windowBackground">@drawable/window_bg</item>
+          
+           <item name="android:textAppearance">@style/LwTheme.TextAppearance</item> 
+           <item name="android:buttonStyle">@style/LwTheme.Button</item>
+           <item name="android:spinnerStyle">@style/LwTheme.Spinner</item>
+           <item name="android:editTextStyle">@style/LwTheme.EditText</item>
+           <item name="android:textViewStyle">@style/LwTheme.TextView</item>
+     
+       	    <item name="android:popupMenuStyle">@style/LwTheme.PopupMenu</item>
+       	 
+       
+    </style>
+   
+  
+    
+ <style name="LwTheme.TextAppearance" parent="android:style/TextAppearance">        
+     
+         <item name="android:textStyle">bold</item>
+    </style>
+ 
+      <style name="LwTheme.Button" parent="android:style/Widget.Button">
+          <item name="android:background">@drawable/button_bg</item>
+          <item name="android:textColor">@color/button_text</item>
+          <item name="android:padding">@dimen/button_padding</item>
+      </style>
+      
+       <style name="LwTheme.Spinner" parent="android:style/Widget.Spinner">
+          <item name="android:background">@drawable/spinner_bg</item>
+          <item name="android:textColor">@color/spinner_text</item>
+          <item name="android:padding">@dimen/spinner_padding</item>
+          <item name="android:popupBackground">@null</item>
+     	 <item name="android:spinnerMode">dialog</item>
+      </style>
+         <style name="LwTheme.EditText" parent="android:style/Widget.EditText">
+          <item name="android:background">@drawable/edittext_bg</item>
+          <item name="android:textColor">@color/edittext_text</item>
+          <item name="android:padding">@dimen/edittext_padding</item>
+      </style>
+      
+              <style name="LwTheme.TextView" parent="android:style/Widget.TextView">
+          <item name="android:background">@drawable/textview_bg</item>
+          <item name="android:textColor">@color/textview_text</item>
+          <item name="android:padding">@dimen/textview_padding</item>
+      </style>
+       <style name ="LwTheme.PopupMenu" parent="android:Theme.Holo.Light">
+        <item name="android:popupBackground">@color/button_normal</item>
+  </style>
+    
+</resources>
