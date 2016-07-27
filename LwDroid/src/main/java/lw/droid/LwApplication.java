@@ -1,6 +1,9 @@
 package lw.droid;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.HashMap;
 
+import lw.droid.commons.Helper;
 import lw.droid.forms.ActivityFinishedCallback;
 import lw.droid.forms.LwActivity;
 import android.R;
@@ -136,5 +139,25 @@ public class LwApplication extends Application {
 			return  new AlertDialog.Builder(ctx);
 		else
 			return  new AlertDialog.Builder(new ContextThemeWrapper(ctx, getStyle()));
+	}
+
+
+
+	public  String readStringFromAssets(String assetPath) throws IOException {
+
+
+		InputStream is = getAssets().open(assetPath);
+		try
+
+		{
+			String rv = Helper.loadStringFromStream(is);
+			return rv;
+		}
+
+		finally
+
+		{
+			is.close();
+		}
 	}
 }

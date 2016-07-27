@@ -205,7 +205,11 @@ public abstract class LwDialog<T extends LwDialog.DialogModelBase> extends Dialo
 		Display display = getActivity().getWindowManager().getDefaultDisplay(); 
 		int mwidth = display.getWidth();
 		int mheight = display.getHeight();
-		
+
+		int wv = getRootView().getLayoutParams().width;
+		int wh = getRootView().getLayoutParams().height;
+		int wm = getRootView().getMeasuredWidth();
+		int hm = getRootView().getMeasuredHeight();
 		int widthMeasureSpec = MeasureSpec.makeMeasureSpec( LayoutParams.WRAP_CONTENT, MeasureSpec.EXACTLY);
 		int heightMeasureSpec = MeasureSpec.makeMeasureSpec(LayoutParams.WRAP_CONTENT, MeasureSpec.EXACTLY);
 		topView.measure(widthMeasureSpec, heightMeasureSpec);
@@ -215,13 +219,13 @@ public abstract class LwDialog<T extends LwDialog.DialogModelBase> extends Dialo
 		lp.width = (int) (w*2.5);
 		if(lp.width > mwidth*0.8)
 			lp.width = (int) (mwidth*0.8);
-		lp.height = h;
-		if(mwidth>mheight)
-			lp.height =(int) (h*0.8);
+	//	lp.height = h;
+		//if(mwidth>mheight)
+		//	lp.height =(int) (h*0.8);
 		
 		
-		if(lp.height > mheight*0.8)
-			lp.height = (int) (mheight*0.8);
+	//	if(lp.height > mheight*0.8)
+	//		lp.height = (int) (mheight*0.8);
 	}
 
 	

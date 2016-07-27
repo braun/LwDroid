@@ -45,7 +45,7 @@ public class WeatherHelper {
 	
 	public static OpenWeatherForecast getLocationForecast(Location loc) {
 
-		String urlquery = "http://openweathermap.org/data/2.5/forecast?lat="+loc.getLatitude()+"&lon="+ loc.getLongitude() +"&units=metric";
+		String urlquery = "http://openweathermap.org/data/2.5/forecast?lat="+loc.getLatitude()+"&lon="+ loc.getLongitude() +"&units=metric&APPID=98dcaaf6ef5e8672f77eddad67f4a3b8";
 
 		HttpGet httpGet = new HttpGet(urlquery);
 		

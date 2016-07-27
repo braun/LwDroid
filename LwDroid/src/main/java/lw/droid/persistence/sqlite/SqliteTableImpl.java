@@ -86,12 +86,12 @@ public class SqliteTableImpl<T extends Persistable,R extends SqlitePersistable> 
 		//if(!hasPrimaryKey(persistable))
 		//	return;
 		
-	 getDatabase().delete(mTableName, mPrimaryKeyField+"="+getPrimaryKey(pk),null);
+	 getDatabase().delete(mTableName, mPrimaryKeyField + "=" + getPrimaryKey(pk), null);
 	}
 	
 	@Override
 	public void deleteAll() throws PersistenceException {
-		getDatabase().delete(mTableName, null,null);
+		getDatabase().delete(mTableName, null, null);
 		
 	}
 	private String getPrimaryKey(Long pk) {
@@ -138,19 +138,36 @@ public class SqliteTableImpl<T extends Persistable,R extends SqlitePersistable> 
 	
 	public List<T> find(
 		T persistable) throws PersistenceException {
-			
-		
-	
 			return find(persistable,null,null);
 	}
+
 	public List<T> find(
 			T persistable,String orderBy,String limit) throws PersistenceException {
+		return find(persistable,null,null,orderBy,limit);
+	}
+		public List<T> find(
+			T persistable,String additionalWhere,String[] additionalPars,String orderBy,String limit) throws PersistenceException {
 				
 			ArrayList<T> rv = new ArrayList<T>();
 			ContentValues qvalues = ((R)persistable).getDirtyFields();
 			StringBuilder sb = new StringBuilder();
-			String[]  pars = new String[qvalues.size()];
+
+			String[]  pars = null;
 			int i = 0;
+
+			if(additionalWhere != null)
+				sb.append(additionalWhere);
+
+			if(additionalPars != null)
+			{
+				pars = new String[qvalues.size()+additionalPars.length];
+				for(String adpar: additionalPars)
+					pars[i++]=adpar;
+
+			}
+			else
+				pars = new String[qvalues.size()];
+
 			for(Entry<String, Object> e : qvalues.valueSet())
 			{
 				if(sb.length() > 0)
